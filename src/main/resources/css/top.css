@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "FontAwesome";
+    src: url('../font/fontawesome.ttf');
+}
+
+.btn-toggle {
+    -fx-font-family: "FontAwesome";
+    -fx-pref-height: 40px;
+    -fx-pref-width: 40px;
+    -fx-font-size: 14px;
+	-fx-effect: none;
+	-fx-background-color: none;
+}
+
+.btn-toggle:hover {
+	-fx-background-color: none;
+}
+
+.btn-toggle:pressed, .btn-toggle:focused, .btn-toggle:pressed:focused {
+    -fx-background-color: none;
+    -fx-effect: none;
+	-fx-text-fill: -fx-accent-color;
+}
+
+.top {
+    -fx-background-color: #dfdfdf;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}

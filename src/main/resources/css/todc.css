@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+.md-button {
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: #444;
+    -fx-background-color: rgba(230, 230, 230, 1);
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 4, 0.0, 0, 1);
+}
+
+.md-button:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 3);
+}
+
+.md-button:focused {
+    -fx-background-color:
+        rgba(245, 245, 245, 1),
+        rgba(230, 230, 230, 1);
+    -fx-background-insets: 0, 1;
+}

@@ -1,0 +1,34 @@
+apply from: 'javafx.plugin'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile fileTree(dir: 'libs/akka', include: '*.jar')
+
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: '2.3.4'
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.11', version: '2.3.4'
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.11.4'
+
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '8.20.9-SNAPSHOT'
+    compile group: 'pl.plum', name: 'EventBusFX', version: '1.0-SNAPSHOT'
+}
+
+jar {
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
+
+javafx {
+    mainClass = 'pl.plum.powerofjavafx.Main'
+}
